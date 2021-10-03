@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private TaskViewModel taskViewModel;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
-
+    private int counter;
 
 
     @Override
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        counter = 0;
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
-            Task task = new Task("ToDo", Priority.HIGH, Calendar.getInstance().getTime(),
+            Task task = new Task("Задача " + counter++, Priority.MEDIUM, Calendar.getInstance().getTime(),
                     Calendar.getInstance().getTime(), false);
             taskViewModel.insert(task);
         });

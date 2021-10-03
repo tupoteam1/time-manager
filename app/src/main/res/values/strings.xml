@@ -14,13 +14,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_todo_hint">e.g., Eat less at dinner</string>
-    <string name="today_calendar_button">Today</string>
+    <string name="today_calendar_button">Сегодня</string>
     <string name="empty_field">Empty task</string>
     <string name="due_date_text">Due Date</string>
-    <string name="today">Today</string>
-    <string name="tomorrow">Tomorrow</string>
-    <string name="this_wknd">This Weekend</string>
-    <string name="next_week">Next Week</string>
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="this_wknd">На этой неделе</string>
+    <string name="next_week">На следующей неделе</string>
     <string name="radio_high">High</string>
     <string name="radio_med">Medium</string>
     <string name="radio_low">Low</string>
