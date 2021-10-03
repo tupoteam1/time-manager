@@ -13,10 +13,10 @@
     <string name="tv_title">Title</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="enter_todo_hint">e.g., Eat less at dinner</string>
+    <string name="enter_todo_hint">Например, выполнить зарядку</string>
     <string name="today_calendar_button">Сегодня</string>
     <string name="empty_field">Empty task</string>
-    <string name="due_date_text">Due Date</string>
+    <string name="due_date_text">Срок выполнения</string>
     <string name="today">Сегодня</string>
     <string name="tomorrow">Завтра</string>
     <string name="this_wknd">На этой неделе</string>
