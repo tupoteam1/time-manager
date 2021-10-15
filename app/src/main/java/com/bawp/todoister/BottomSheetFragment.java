@@ -167,17 +167,21 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
         int id = v.getId();
         if (id == R.id.today_chip) {
             //сегодня
-            calendar.add(Calendar.DAY_OF_YEAR, 0);
-            dueDate = calendar.getTime();
+            setToday();
         }else if (id == R.id.tomorrow_chip){
             //завтра
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            dueDate = calendar.getTime();
+            setToday();
+            calendar.add(Calendar.DAY_OF_YEAR,1);
         }else if (id == R.id.next_week_chip) {
             //через 7 дней
+            setToday();
             calendar.add(Calendar.DAY_OF_YEAR, 7);
-            dueDate = calendar.getTime();
         }
+    }
 
+    //исправил баг
+    public void setToday() {
+        calendar = Calendar.getInstance();
+        dueDate = calendar.getTime();
     }
 }

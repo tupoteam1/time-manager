@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple ToDo</string>
+    <string name="app_name">Time Manager</string>
     <string name="action_settings">О приложении</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -21,9 +21,9 @@
     <string name="tomorrow">Завтра</string>
     <string name="this_wknd">На этой неделе</string>
     <string name="next_week">На следующей неделе</string>
-    <string name="radio_high">High</string>
-    <string name="radio_med">Medium</string>
-    <string name="radio_low">Low</string>
+    <string name="radio_high">Высокий</string>
+    <string name="radio_med">Средний</string>
+    <string name="radio_low">Низкий</string>
     <string name="image_description">button image</string>
     <string name="about_text">Раззработчики: Олег Давыдов и Артур Пономарев. Версия: 0.1</string>
     <string name="add_todos">Add a Todo...</string>
