@@ -80,13 +80,22 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
     public void onResume() {
         super.onResume();
 
-        if (sharedViewModel.getSelectedItem().getValue() != null) {
+        if (sharedViewModel.getIsEdit() == true) {
             isEdit = sharedViewModel.getIsEdit();
             Task task = sharedViewModel.getSelectedItem().getValue();
             enterTodo.setText(task.getTask());
             Log.d("My", "onViewCreated: " + task.getTask());
         }
+        else {
+            isEdit = sharedViewModel.getIsEdit();
+        }
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        sharedViewModel.setIsEdit(false);
+        enterTodo.setText("");
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
