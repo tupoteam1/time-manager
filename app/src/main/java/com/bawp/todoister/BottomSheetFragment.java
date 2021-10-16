@@ -166,22 +166,16 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.today_chip) {
-            //сегодня
-            setToday();
+            calendar = Calendar.getInstance();
+            dueDate = calendar.getTime();
         }else if (id == R.id.tomorrow_chip){
-            //завтра
-            setToday();
+            calendar = Calendar.getInstance();
             calendar.add(Calendar.DAY_OF_YEAR,1);
+            dueDate = calendar.getTime();
         }else if (id == R.id.next_week_chip) {
-            //через 7 дней
-            setToday();
+            calendar = Calendar.getInstance();
             calendar.add(Calendar.DAY_OF_YEAR, 7);
+            dueDate = calendar.getTime();
         }
-    }
-
-    //исправил баг
-    public void setToday() {
-        calendar = Calendar.getInstance();
-        dueDate = calendar.getTime();
     }
 }

@@ -20,7 +20,12 @@ public interface TaskDao {
     @Query("DELETE FROM task_table")
     void deleteAll();
 
-    @Query("SELECT * FROM task_table ORDER BY due_date, priority")
+    @Query("SELECT * FROM task_table ORDER BY " +
+            "CASE priority " +
+                "WHEN 'HIGH' THEN 1 " +
+                "WHEN 'MEDIUM' THEN 2 " +
+                "ELSE 3 " +
+            "END;")
     LiveData<List<Task>> getTasks();
 
     @Query("SELECT * FROM task_table WHERE task_table.task_id == :id")

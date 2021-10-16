@@ -33,7 +33,6 @@ public abstract class TaskRoomDatabase extends RoomDatabase {
                         //invoke Dao, and write
                         TaskDao taskDao = INSTANCE.taskDao();
                         taskDao.deleteAll(); //clean slate!
-
                         //writing to our table
                     });
                 }
