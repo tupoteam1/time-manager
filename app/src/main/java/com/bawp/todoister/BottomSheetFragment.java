@@ -46,7 +46,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
     private SharedViewModel sharedViewModel;
     private boolean isEdit;
     private Priority priority;
-
+    private Long time;
     public BottomSheetFragment() {
 
     }
@@ -126,16 +126,16 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
                     selectedButtonId = checkedId;
                     selectedRadioButton = view.findViewById(selectedButtonId);
                     if (selectedRadioButton.getId() == R.id.radioButton_high) {
-                        priority = Priority.HIGH;
+                        priority = Priority.aHIGH;
                     }else if (selectedRadioButton.getId() == R.id.radioButton_med) {
-                        priority = Priority.MEDIUM;
+                        priority = Priority.bMEDIUM;
                     }else if (selectedRadioButton.getId() == R.id.radioButton_low) {
-                        priority = Priority.LOW;
+                        priority = Priority.cLOW;
                     }else {
-                        priority = Priority.LOW;
+                        priority = Priority.cLOW;
                     }
                 }else {
-                    priority = Priority.LOW;
+                    priority = Priority.cLOW;
                 }
 
             });
@@ -177,14 +177,20 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
         if (id == R.id.today_chip) {
             calendar = Calendar.getInstance();
             dueDate = calendar.getTime();
+            time = dueDate.getTime();
+            dueDate = new Date(time - time % (24 * 60 * 60 * 1000));
         }else if (id == R.id.tomorrow_chip){
             calendar = Calendar.getInstance();
             calendar.add(Calendar.DAY_OF_YEAR,1);
             dueDate = calendar.getTime();
+            time = dueDate.getTime();
+            dueDate = new Date(time - time % (24 * 60 * 60 * 1000));
         }else if (id == R.id.next_week_chip) {
             calendar = Calendar.getInstance();
             calendar.add(Calendar.DAY_OF_YEAR, 7);
             dueDate = calendar.getTime();
+            time = dueDate.getTime();
+            dueDate = new Date(time - time % (24 * 60 * 60 * 1000));
         }
     }
 }
