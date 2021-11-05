@@ -19,6 +19,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="Theme.TodoisterLaunch" parent="Theme.Todoister.NoActionBar">
+        <item name="android:windowBackground">@drawable/launch_back</item>
+    </style>
+
     <style name="Theme.Todoister.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Todoister.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
